@@ -1,0 +1,6 @@
+export FLASK_APP="index.py"
+export FLASK_ENV="development"
+export DIALOGFLOW_PROJECT_ID="bot49-10e14"
+export GOOGLE_APPLICATION_CREDENTIALS="Bot49-8272c2fa17d5.json"
+export GOOGLE_MAPS_API_KEY="AIzaSyAE_3zDnFfNbsfM7EDXhJVKmSdx-NA4Yd0"
+
