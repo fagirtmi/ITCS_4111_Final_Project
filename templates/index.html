@@ -3,16 +3,23 @@
 <!doctype html>
 <html lang="en">
     <head>
+
         <!-- Required meta tags -->
         <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
                 <!-- Bootstrap CSS -->
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
                     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+                        <!-- <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='images/favicon.ico') }}"/> -->
                         <title>Bot49</title>
-                        </head>
+    </head>
+
     <body>
-        <div class="container h-100">
+        <div class="bot_header"> 
+            <h1>BOT_49</h1><img src="{{ url_for('static', filename='images/niner.png') }}" width="50" height="50" style="float:right;"></img>
+
+        </div>
+        <div class="container h-100" style="overflow: hidden;">
             <div class="row align-items-center h-100">
                 <div class="col-md-8 col-sm-12 mx-auto">
                     <div class="h-100 justify-content-center">
@@ -22,7 +29,8 @@
                         <form id="target">
                             <input class="input" type="text" value="" placeholder="Enter message..." id="input_message"/>
                             <input type="submit" hidden>
-                                </form>
+                            <div id="image"></div>
+                        </form>
                     </div>
                 </div>
             </div>

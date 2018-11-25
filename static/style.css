@@ -16,13 +16,13 @@ body,html {
 }
 
 .bot-message {
-    background: green;
+    background: #0084ff;
     color: white;
 }
 
 .human-message {
-    background: dodgerblue;
-    color: white;
+    background: #d3d3d3;
+    color: black;
     margin: 13px 1px;
 }
 
@@ -30,6 +30,16 @@ body,html {
     width: 100%;
     margin: 35px 0px;
     height: 60px;
-    border: 1px solid rosybrown;
+    border: 1px solid black;
     border-radius: 3px;
+}
+
+.bot_header{
+  background-color: #00d1b2;
+  padding: 10px;
+  color: black;
+}
+
+h1 {
+    display: inline;
 }
