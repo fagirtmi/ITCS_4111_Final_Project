@@ -14,26 +14,14 @@ search_url = "https://maps.googleapis.com/maps/api/place/textsearch/json"
 # @app.route("/get_picture", methods=['POST'])
 def get_directions(message, os):
 	key = os.getenv('GOOGLE_MAPS_API_KEY') # key is good
-	response_data = requests.get('https://www.iplocation.net/go/ipinfo').text
 
-	try:
-		response_json_data = json.loads(response_data)
-		location = response_json_data["loc"].split(",")
-		message = message.replace(" ", "+")
-		building = message + "+UNCC"
-		address = location_url + "?key=" + key + "&origin=" + location[0] + "," + location[1] + "&destination=" + building
-	except ValueError:
-		print("Exception happened while loading data")
-		address = location_url + "?key=" + key + "&origin=your+location" + "&destination=" + building
+	message = message.replace(" ", "+")
 
-	print(address)
+	building = message + "+UNCC"
+
+	address = location_url + "?key=" + key + "&origin=your+location" + "&destination=" + building
+
 	return address
-
-	# message = message.replace(" ", "+")
-
-	# building = message + "+UNCC"
-
-	# address = location_url + "?key=" + key + "&origin=your+location" + "&destination=" + building
 	
 	# building = data['queryResult']['parameters']['Buildings']
 	# building = building + " UNCC"
