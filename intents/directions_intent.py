@@ -2,7 +2,6 @@
 import requests
 import json
 import imghdr
-import geocoder
 
 from flask import Flask, request, jsonify, render_template, send_from_directory
 app = Flask(__name__)
@@ -16,7 +15,7 @@ search_url = "https://maps.googleapis.com/maps/api/place/textsearch/json"
 def get_directions(message, os):
 	key = os.getenv('GOOGLE_MAPS_API_KEY') # key is good
 	response_data = requests.get('https://www.iplocation.net/go/ipinfo').text
-	
+
 	try:
 		response_json_data = json.loads(response_data)
 		location = response_json_data["loc"].split(",")
