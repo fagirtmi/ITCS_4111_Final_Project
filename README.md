@@ -17,8 +17,6 @@ The chatbot is hosted using Heroku and can be visted from this link <https://cha
 
 **Project Structure:**
 
-![alt text](https://drive.google.com/open?id=1i3X2bMJAbQHqiXZLuZgGsNc2U5zZxjHY)
-
 **Virtual:** 
 Folder contains the packages and libraries needed to run the chatbot. 
 
