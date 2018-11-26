@@ -40,7 +40,6 @@ def send_message():
 	message = request.form['message']
 	project_id = os.getenv('DIALOGFLOW_PROJECT_ID')
 	fulfillment_text = detect_intent_texts(project_id, "unique", message, 'en')
-	# response_text = { "message":  fulfillment_text}
 
 	return jsonify(fulfillment_text)
 
@@ -49,14 +48,10 @@ def send_message():
 def results():
 	message = request.form['message']
 	intent = request.form['intent']
-	# data = request.get_json(silent=True) # get data in json form
-	# intent = data['queryResult']['intent']['displayName']
 
 	if(intent == 'pictures'):
-		# response = picture_intent.get_building_image(data, os)
 		response = picture_intent.get_building_image(message, os)
 	elif(intent == 'directions'):
-		# response = directions_intent.get_directions(data, os)
 		response = directions_intent.get_directions(message, os)
 		response = {"fulfillmentText": response}
 

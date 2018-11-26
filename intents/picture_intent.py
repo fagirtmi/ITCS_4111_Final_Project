@@ -9,7 +9,6 @@ app = Flask(__name__)
 photos_url = "https://maps.googleapis.com/maps/api/place/photo"
 search_url = "https://maps.googleapis.com/maps/api/place/textsearch/json"
 
-# @app.route("/get_picture", methods=['POST'])
 @app.route("/sendRequest/<string:query>")
 def get_building_image(message, os):
 

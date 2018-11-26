@@ -1,19 +1,23 @@
 # ITCS 4111 Final Project
 **Developers:** 
 
-`Fatih Agirtmis` * Email: fagirtmi@uncc.edu
+`Fatih Agirtmis` 
+* Email: fagirtmi@uncc.edu
 
-`Jacqueline White` * Email: jwhit241@uncc.edu 
+`Jacqueline White` 
+* Email: jwhit241@uncc.edu 
 
 **Description:** This repository contains the codebase and instructions on how to run BOT_49 locally on your machine. If you have any questions please reach out to Fatih or Jacqueline
 
-## Hosted Web App: 
+## Hosted ChatBot: 
 
-The application is hosted using Heroku and can be visted from this link <https://chatbot-49.herokuapp.com/>
+The chatbot is hosted using Heroku and can be visted from this link <https://chatbot-49.herokuapp.com/>
 
 ## Running it Locally:
 
 **Project Structure:**
+
+![alt text](https://drive.google.com/open?id=1i3X2bMJAbQHqiXZLuZgGsNc2U5zZxjHY)
 
 **Virtual:** 
 Folder contains the packages and libraries needed to run the chatbot. 
@@ -42,23 +46,25 @@ Folder contains the python classes used to interact with Google's API and Dialog
 
 `index.py` - main python file that is responsible for redirecting the server side to load pages, get data, and return events
 
-### Step 1:
+## Instructions:
+
+### Step 1
 
 Download and unzip the project to a location of your choosing. 
 
-### Step 2:
+### Step 2
 
 Change into the project root directiory and run the command `. env.sh ` to set the enviromental variables on your machine 
 
-### Step 3:
+### Step 3
 
 Run the command `source virtual/bin/activate` to get into your virtual enviroment 
 
-### Step 4:
+### Step 4
 
 Once you are into the virtual enviroment, run the command `pip install -r requirements.txt` to download all your dependicies 
 
-### Step 5:
+### Step 5
 
 After the dependencies have been installed, run `flask run` to run the app locally 
 
