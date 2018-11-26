@@ -9,22 +9,13 @@
 
 **Description:** This repository contains the codebase and instructions on how to run BOT_49 locally on your machine. If you have any questions please reach out to Fatih or Jacqueline
 
-## Hosted ChatBot: 
+## Project Structure:
 
-The chatbot is hosted using Heroku and can be visted from this link <https://chatbot-49.herokuapp.com/>
+**Virtual:** Folder contains the packages and libraries needed to run the chatbot. 
 
-## Running it Locally:
+**Templates:** Folder contains the html for the bot
 
-**Project Structure:**
-
-**Virtual:** 
-Folder contains the packages and libraries needed to run the chatbot. 
-
-**Templates:**  
-Folder contains the html for the bot
-
-**Intents:**  
-Folder contains the python classes used to interact with Google's API and DialogFlow
+**Intents:** Folder contains the python classes used to interact with Google's API and DialogFlow
 
 `directions_intent:` responsible for getting the directions from Google's Map API
 
@@ -43,6 +34,12 @@ Folder contains the python classes used to interact with Google's API and Dialog
 `env.sh` - file contains important enviromental variables needed to run the bot and connect to DialogFlow & Google's Map API
 
 `index.py` - main python file that is responsible for redirecting the server side to load pages, get data, and return events
+
+## Hosted ChatBot: 
+
+The chatbot is hosted using Heroku and can be visted from this link <https://chatbot-49.herokuapp.com/>
+
+## Running it Locally:
 
 ## Instructions:
 
