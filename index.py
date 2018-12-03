@@ -9,6 +9,8 @@ import imghdr
 from flask import Flask, request, jsonify, render_template, send_from_directory
 from intents import picture_intent
 from intents import directions_intent
+from intents import food_directions_intent
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -54,6 +56,12 @@ def results():
 	elif(intent == 'directions'):
 		response = directions_intent.get_directions(message, os)
 		response = {"fulfillmentText": response}
+	elif(intent == 'food directions'):
+		response = food_directions_intent.get_food_directions(message, os)
+		response = {"fulfillmentText": response}
+	# elif(intent == 'food'):
+	# 	response = food_intent.get_food_options(message, os)
+	# 	response = {"fulfillmentText": response}
 
 	return jsonify(response)
 

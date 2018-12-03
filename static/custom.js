@@ -9,13 +9,19 @@ function submit_message(message) {
 
 		if(data.intent == "directions"){
 			$('.chat-container').append(`<div class="chat-message col-md-5 offset-md-7 bot-message">${"Directions to " + data.message}</div>`)
-
 			$.post("/bot_49", {message: data.message, intent: data.intent}, handle_directions);
 		}
 		else if(data.intent == "pictures"){
 			$('.chat-container').append(`<div class="chat-message col-md-5 offset-md-7 bot-message">${data.message}</div>`)
-
 			$.post("/bot_49", {message: data.message, intent: data.intent}, handle_pictures);
+		}
+		else if(data.intent == "food"){
+			$('.chat-container').append(`<div class="chat-message col-md-5 offset-md-7 bot-message">${data.message}</div>`)
+			$('.chat-container').append(`<div class="chat-message col-md-5"> <img src="/static/images/Dining_Options.png" width="500" height="375"></img> </div>`)
+		}
+		else if(data.intent == "food directions"){
+			$('.chat-container').append(`<div class="chat-message col-md-5 offset-md-7 bot-message">${"Directions to " + data.message}</div>`)
+			$.post("/bot_49", {message: data.message, intent: data.intent}, handle_food_directions);
 		}
 		else {
 			$('.chat-container').append(`<div class="chat-message col-md-5 offset-md-7 bot-message">${data.message}</div>`)
@@ -28,10 +34,11 @@ function submit_message(message) {
 	function handle_directions(data){
 		$('.chat-container').append(`<div class="chat-message col-md-5"> <iframe allowfullscreen="" class="maps" frameborder="0" id="mapnavi" name="mapnavi" src=${data.fulfillmentText}> </iframe> </div>`)	
 	}
-
+	function handle_food_directions(data){
+		$('.chat-container').append(`<div class="chat-message col-md-5"> <iframe allowfullscreen="" class="maps" frameborder="0" id="mapnavi" name="mapnavi" src=${data.fulfillmentText}> </iframe> </div>`)	
+	}
 	function handle_pictures(data){
 		$('.chat-container').append(`<div class="chat-message col-md-5"> <img id="theImg" src=${data} style="max-width:auto; height:100%;"> </img> </div>`)
-
 		// $('#theDiv').prepend('<img id="theImg" src="theImg.png" />')
 	}
 }
